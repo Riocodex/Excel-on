@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    
+
+    <title>Excell-on services</title>
+  </head>
+
+
+  <style>
+
+   @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+   line-height: 1.8;
+   color: #898fa1;
+   font-size: 15px;
+   font-family: 'Lato', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #11245A;
+}
+
+.title-sm {
+   font-size: 16px;
+   letter-spacing: 1px;
+}
+
+a {
+   font-weight: 700;
+   transition: all 0.4s ease;
+   text-decoration: none;
+}
+
+img {
+   width: 100%;
+}
+
+small {
+   font-size: 12px;
+   letter-spacing: 2px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+section {
+   padding-top: 100px;
+   padding-bottom: 100px;
+}
+
+.navbar {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+   font-size: 22px;
+   text-transform: uppercase;
+   color: #11245A !important;
+}
+.navbar .nav-link {
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+   color: #E93B81;
+}
+
+#home {
+   background: linear-gradient(rgba(17, 36, 90, 0.8), rgba(17, 36, 90, 0.8)), url(../img/hero_img.jpg);
+   min-height: 100vh;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   display: flex;
+   align-items: center;
+}
+
+#home h1 {
+   font-weight: 700;
+}
+
+#home p {
+   max-width: 550px;
+   margin: 18px auto;
+}
+
+.btn {
+   font-weight: 700;
+   font-size: 12px;
+   text-transform: uppercase;
+   padding: 12px 28px;
+   border-radius: 0;
+}
+
+.btn-brand {
+   background-color: #E93B81;
+   color: #fff;
+}
+
+.btn-brand:hover {
+   background-color: #ce2f6e;
+   color: #fff;
+}
+
+.section-intro {
+   text-align: center;
+   margin-bottom: 60px;
+}
+
+.section-intro .hline {
+   width: 120px;
+   height: 2px;
+   background-color: rgba(0, 0, 0, 0.1);
+   margin: 16px auto 0 auto;
+}
+
+.icon-box {
+   width: 60px;
+   height: 60px;
+   background-color: #E93B81;
+   color: #fff;
+   border-radius: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 32px;
+   flex: none;
+}
+
+.portfolio-item {
+   overflow: hidden;
+   position: relative;
+}
+ .portfolio-item img,
+ .portfolio-item .portfolio-overlay {
+    transition: all 0.4s ease;
+ }
+
+.portfolio-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(17, 36, 90, 0.9);
+   display: flex;
+   align-items: flex-end;
+   padding: 30px;
+   opacity: 0;
+}
+
+.portfolio-overlay h3,
+.portfolio-overlay h6 {
+   color: #fff;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+   opacity: 1;
+}
+
+.portfolio-item:hover img {
+   transform: scale(1.1);
+}
+
+
+.feature .icon-box {
+   width: 34px;
+   height: 34px;
+   border-radius: 100px;
+   font-size: 24px;
+}
+
+.team-member {
+   background-color: #11245A;
+}
+
+.team-member.even {
+   background-color: #162e6e;
+}
+
+.team-member .hline {
+   width: 70px;
+   height: 2px;
+   margin: 16px auto;
+   background-color: rgba(255, 255, 255, 0.445);
+}
+
+.team-member .team-member-img img,
+.team-member .team-member-img .social-icons {
+   transition: all 0.4s ease;
+}
+
+.team-member .team-member-img {
+   position: relative;
+   overflow: hidden;
+}
+
+.team-member .team-member-img .social-icons {
+   width: 100%;
+   height: 60px;
+   background-color: #E93B81;
+   position: absolute;
+   bottom: -60px;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.team-member .team-member-img .social-icons a {
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid rgba(255, 255, 255, 0.5);
+   font-size: 24px;
+   color: #fff;
+   border-radius: 100px;
+   margin-left: 4px;
+   margin-right: 4px;
+}
+
+.team-member .team-member-img .social-icons a:hover {
+   background-color: #fff;
+   color: #E93B81;
+}
+
+.team-member:hover .team-member-img .social-icons {
+   bottom: 0;
+}
+
+.team-member:hover img {
+   transform: translateY(-60px);
+}
+
+
+#testimonials img {
+   width: 65px;
+   height: 65px;
+   border-radius: 100px;
+   transition: all 0.4s ease;
+}
+
+#testimonials .nav-pills .nav-link.active {
+   background-color: transparent;
+}
+
+#testimonials .nav-pills .nav-link.active img {
+   transform: scale(1.3);
+}
+
+.review .stars {
+   color: #E93B81;
+}
+
+.review p {
+   max-width: 720px;
+   margin: 24px auto;
+   font-style: italic;
+}
+
+
+#clients img {
+   height: 35px;
+}
+
+form .form-control {
+   border-radius: 0;
+}
+
+form .form-control:focus {
+   box-shadow: none;
+   border-color: #E93B81;
+}
+
+#cta {
+   background-color: #E93B81;
+}
+
+
+.footer-top {
+   padding-top: 80px;
+   padding-bottom: 30px;
+}
+
+.footer-bottom {
+   padding-top: 30px;
+   padding-bottom: 30px;
+   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-links a,
+footer .social-icons a {
+   color: #898fa1;
+}
+
+footer .social-icons a {
+   font-size: 24px;
+}
+
+footer .footer-links a {
+   display: block;
+   font-weight: 400;
+}
+
+footer .social-icons a:hover,
+footer .footer-links a:hover {
+   color: #E93B81;
+}
+
+
+  </style>
+
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    
+   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="#">Excell-on</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="#services">Services</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#features">Features</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#contact">Contact</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">Login</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">Sign in</a>
+             </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+   <section id="home">
+      <div class="container text-center">
+         <div class="row justify-content-center">
+            <div class="col-md-10">
+               <h1 class="text-white display-4">WE ARE CREATIVE AGENCY, CREATIVE PEOPLE</h1>
+               <p class="text-white">Excell-on Consulting Services (ECS) helps organizations develop innovative business and commerce strategies and solutions. These solutions allow their (organizations, say clients of Excell-on Consulting Services) customers to capitalize on new technologies to create innovative products and services for the economy. Their consulting team stays focused on defining, optimizing, and aligning their client’s business and IT strategies.</p>
+               <a href="#contact" class="btn btn-brand">Contact</a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="services">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 section-intro">
+               <h1>Our Services</h1>
+               <div class="hline"></div>
+            </div>
+         </div>
+         <div class="row">
+          
+           
+      
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bxs-check-shield'></i>
+               </div>
+               <h4 class="title-sm mt-4">In-Bound Services</h4>
+               <p>The In-bound service is a service in which one can only receive the calls from the customers. These call centers provide 24 hours service to all customers. The primary goal of these call centers are to receive product orders, help customers both technically and non-technically, to find dealer location.Technical Support
+                  and Customer Service
+                  </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bx-laptop'></i>
+               </div>
+               <h4 class="title-sm mt-4">Out-Bound Services</h4>
+               <p>The Out-bound service is a service in which the employees of Excell-on call the customers for product promotions, for checking with the customer satisfaction on the services they provide, and for the telemarketing. Outbound Call Centers depends on the technological solutions, extensive experience, quality assurance programs...etc .</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 p-4">
+               <div class="icon-box">
+                  <i class='bx bxs-happy-heart-eyes'></i>
+               </div>
+               <h4 class="title-sm mt-4">Tele Marketing Service</h4>
+               <p>The Tele Marketing service is a service which is purely for the promotion of marketing or sales of the products and services.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   <section id="features">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 section-intro">
+               <h1>Our Features</h1>
+               <div class="hline"></div>
+            </div>
+         </div>
+         <div class="row gy-4">
+            <div class="col-lg-4 col-sm-6 feature d-flex">
+               <div class="icon-box me-3">
+                  <i class="bx bx-check"></i>
+               </div>
+               <div>
+                  <h5 class="title-sm">HR Management</h5>
+               </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 feature d-flex">
+               <div class="icon-box me-3">
+                  <i class="bx bx-check"></i>
+               </div>
+               <div>
+                  <h5 class="title-sm">Administration</h5>
+               </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 feature d-flex">
+               <div class="icon-box me-3">
+                  <i class="bx bx-check"></i>
+               </div>
+               <div>
+                  <h5 class="title-sm">Service</h5>
+               </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 feature d-flex">
+               <div class="icon-box me-3">
+                  <i class="bx bx-check"></i>
+               </div>
+               <div>
+                  <h5 class="title-sm">Training</h5>
+               </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 feature d-flex">
+               <div class="icon-box me-3">
+                  <i class="bx bx-check"></i>
+               </div>
+               <div>
+                  <h5 class="title-sm">Internet Security</h5>
+               </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 feature d-flex">
+               <div class="icon-box me-3">
+                  <i class="bx bx-check"></i>
+               </div>
+               <div>
+                  <h5 class="title-sm">Auditing</h5>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   
+
+   <section id="contact">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-4">
+               <img src="img/cntct.jpg" alt="">
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+               <form>
+                  <div class="mb-3">
+                    <small>Name</small>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                     <small>Email</small>
+                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                   </div>
+                   <div class="mb-3">
+                     <small>Name</small>
+                     <textarea name="" id="" cols="30" rows="4" class="form-control"></textarea>
+                   </div>
+                  <button type="submit" class="btn btn-brand">Submit</button>
+                </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="cta" class="py-5">
+      <div class="container py-4">
+         <div class="row justify-content-center">
+            <div class="col-md-6">
+               <h3 class="text-white">Let's build something great.</h3>
+            </div>
+            <div class="col-auto">
+               <a href="#" class="btn btn-light">Get Started</a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer>
+      <div class="footer-top">
+         <div class="container">
+            <div class="row gy-5">
+               <div class="col-md-4">
+                  <h4 class="logo-text">Excell-on</h4>
+                  <p>As the Internet and the web being the growth engines of the new millennium, the management had decided to maintain the details of their services and that of their clients along with the services that they (clients of Excell-on) prefer, payment details. So they want an online application to be introduced into their system through which they can keep track of the services they provide, their clients, type of service that their client had preferred, and the products and the procedures of their clients and the details of the customers, and the call logs.</p>
+                  <div class="social-icons">
+                     <a href="#"><i class="bx bxl-facebook"></i></a>
+                     <a href="#"><i class="bx bxl-twitter"></i></a>
+                     <a href="#"><i class="bx bxl-instagram"></i></a>
+                     <a href="#"><i class="bx bxl-github"></i></a>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <h5 class="title-sm">Navigation</h5>
+                  <div class="footer-links">
+                     <a href="#services">Services</a>
+                     <a href="#features">Features</a>
+                     <a href="#contact">Contact</a>
+                     <a href="#">Home</a>
+                  </div>
+               </div>
+             
+               <div class="col-md-2">
+                  <h5 class="title-sm">Contact</h5>
+                  <div class="footer-links">
+                     <p class="mb">zik Avenue, Enugu, aptech</p>
+                     <p class="mb-">+234 703 018 5046</p>
+                     <p class="mb">onwukachibike@gmail.com</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-bottom">
+         <div class="container">
+            <div class="row justify-content-between gy-3">
+               <div class="col-md-6">
+                  <p class="mb-0">©SIGMAS2022.  All rights reserved</p>
+               </div>
+               <div class="col-auto">
+                  <p class="mb-0">Created with ❤️ by RIO & NONNY</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
